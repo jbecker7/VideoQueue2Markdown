@@ -1,11 +1,10 @@
 # VideoQueue2Markdown
 
-What does it say about someone when the first two projects they make in C++ have to do with organizing files?
+(What does it say about someone when the first two projects they make in C++ have to do with organizing files? Am I working my way towards being the Marie Kondo of software? Or am I just sort of neurotic about my file management? I'm not sure.)
 
-VideoQueue2Markdown (VQ2M) is a C++ app that makes it really easy to make a queue for watching videos you have downloaded, provided you have my specific workflow. 
+Regardless of what it reflects about my psyche, VideoQueue2Markdown (VQ2M) is a C++ app that makes it really easy to make a queue for watching videos you have downloaded, provided you have my specific workflow. 
 
-Simply compile it the .cpp file and run its output in the directory where you have lots of videos stored. For example, if you ripped the files off of some DVDs or something like that (lol) and have them stored inside of one directory, you would go inside of that one directory and run VQ2M. After that, it will recursively trace through all of the subdirectories and generate a Markdown file with headers for each subdirectory and convenient checkboxes next to each episode/file, making it easy to mark what you have or haven't watched. For example, let's say that you store your ~~weeb~~ high quality entertainment in a directory called "MyShows" that looks like this:
-
+Simply compile the .cpp file and run the output in the directory where you have lots of videos stored. For example, let's say that you have a bunch of DVDs (lol) which you have ripped into a directory called `MyShows` that looks like this:
 ```
 MyShows/
 │
@@ -26,8 +25,9 @@ MyShows/
     └── Steins;Gate 0 E03.mp4
 ```
 
-After running VQ2M, you would get a markdown file called `video_queue.md` that looks like this:
+After navigating to the directory and running VQ2M, it will recursively trace through all of the subdirectories and generate a Markdown file with headers for each subdirectory and convenient checkboxes next to each episode of your ~~weeb shi~~ high quality entertainment, making it easy to mark what you have or haven't watched. So after running VQ2M in `MyShows/`, you would get a markdown file called `video_queue.md` that looks like this:
 
+```
 # Oregairu
 - [ ] Oregairu S01E01
 - [ ] Oregairu S01E02
@@ -40,3 +40,5 @@ After running VQ2M, you would get a markdown file called `video_queue.md` that l
 - [ ] Steins;Gate 0 E01
 - [ ] Steins;Gate 0 E02
 - [ ] Steins;Gate 0 E03
+```
+After that, you can open the .md file in any Markdown editor (I like Obsidian) and easily mark which episodes you've watched, making it considerably easier to manage all of the videos you want to watch.
